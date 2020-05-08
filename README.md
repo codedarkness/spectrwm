@@ -2,7 +2,7 @@
 
 Is a small dynamic tiling and reparenting window manager for X11.
 
-![spectrwm - darknesscode](https://raw.githubusercontent.com/codedarkness/spectrwm/master/config-files/spectrwm-a.png)
+![spectrwm - darknesscode](https://github.com/codedarkness/spectrwm/blob/master/config-files/spectrwm-a.png)
 
 ## What this does
 
@@ -13,7 +13,7 @@ This script just install a custom build for:
 * conkyrc (for status bar)
 * color schemes for spectrwm
 
-![spectrwm - darknesscode](https://raw.githubusercontent.com/codedarkness/spectrwm/master/config-files/spectrwm-b.png)
+![spectrwm - darknesscode](https://github.com/codedarkness/spectrwm/blob/master/config-files/spectrwm-b.png)
 
 ## Software
 
