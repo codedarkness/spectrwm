@@ -1,34 +1,53 @@
-# spectrwm
+# Spectrwm
 
-Is a small dynamic tiling window manager for X11 written in C and configured with a text configuration file. *Spectrwm* is simple and easy to use.
+Is a small dynamic tiling and reparenting window manager for X11.
 
 ![spectrwm - darknesscode](https://github.com/codedarkness/spectrwm/config-files/spectrwm-a.png)
 
 ## What this does
 
-This script just install and copy some custom files:
+This script just install a custom build for:
 
 * *spectrwm*
-* *conky* (for status bar)
-* Copy custom file for spectrwm.conf
-* Copy custom file for conkyrc
-
-When the installation is done, login in you new desktop.
+* spectrwm.conf (custom file)
+* conkyrc (for status bar)
+* color schemes for spectrwm
 
 ![spectrwm - darknesscode](https://github.com/codedarkness/spectrwm/config-files/spectrwm-b.png)
 
-## Helpful Keybindings
+## Software
 
-The MODKEY4, Windows key
+Here are the software that always install in my systems:
 
-| Keys        | Action               |
-| :---------- | :------------------- |
-| MOD+Enter   | Open Terminal (bash) |
-| MOD+r       | Ranger Filemanager   |
-| MOD+q       | Close Window         |
-| MOD+Shift+q | Exit spectrmw        |
-| MOD+v       | Open Vim             |
+* Compton
+* Ranger file manager
+* Nitrogen
+* Volumeicon
+* nm-applet
+* xfce4-power-manager
+* pacmac-tray
+* xautolock (blurlock)
+* ff-theme-util
+* fix_xcursor
+* bash (can be change)
+* conky
+* dnust
 
-Check the spectrwm.conf for more keybindings
+## Helpfull keybindings for this installation
 
-For more information and learn more about *spectrwm* go to [here](https://github.com/conformal/spectrwm).
+| Keybinding  | Action              |
+| :---------  | :------------------ |
+| MOD+Enter   | Open terminal       |
+| MOD+r       | Ranger File Manager |
+| MOD+v       | Vim                 |
+| MOD+Shift+o | dmenu_recency       |
+| MOD+F10     | Lock screen         |
+| MOD+F11     | Restart computer    |
+| MOD+F12     | Shutdown computer   |
+| MOD+Shift+q | Quit                |
+| MOD+Shift+r | Re-start spectrwm   |
+| ----------  | ------------------- |
+
+Add your keybindings in spectrwm.conf
+
+To lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.

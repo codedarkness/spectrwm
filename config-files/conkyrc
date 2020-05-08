@@ -1,0 +1,11 @@
+out_to_x no
+out_to_console yes
+update_interval 1.0
+total_run_times 0
+use_spacer none
+
+TEXT
++@fg=1; CPU ${cpu}% +@fg=0;  :  +@fg=2; TEM ${acpitemp}°C +@fg=0;  :  +@fg=3; MEM ${mem} +@fg=0;  :  +@fg=4; SDD ${fs_free} +@fg=0;  :  +@fg=5; VOL ${exec amixer get Master -M | grep -oE -m1 "[[:digit:]]*%"} +@fg=0;  :  +@fg=6; ${time %A, %B %d %l:%M %p}
+
+## +@fg=5; BAT ${battery_short} +@fg=0;
+## +@fg=1; UP ${uptime_short} +@fg=0;
