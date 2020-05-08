@@ -2,7 +2,7 @@
 
 Is a small dynamic tiling and reparenting window manager for X11.
 
-![spectrwm - darknesscode](https://github.com/codedarkness/spectrwm/config-files/spectrwm-a.png)
+![spectrwm - darknesscode](https://raw.githubusercontent.com/codedarkness/spectrwm/master/config-files/spectrwm-a.png)
 
 ## What this does
 
