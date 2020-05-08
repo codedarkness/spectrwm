@@ -13,7 +13,7 @@ This script just install a custom build for:
 * conkyrc (for status bar)
 * color schemes for spectrwm
 
-![spectrwm - darknesscode](https://github.com/codedarkness/spectrwm/config-files/spectrwm-b.png)
+![spectrwm - darknesscode](https://raw.githubusercontent.com/codedarkness/spectrwm/master/config-files/spectrwm-b.png)
 
 ## Software
 
