@@ -50,4 +50,4 @@ Here are the software that always install in my systems:
 
 Add your keybindings in spectrwm.conf
 
-To lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.
+Too lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.
