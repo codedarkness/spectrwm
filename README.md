@@ -32,6 +32,7 @@ Here are the software that always install in my systems:
 * bash (can be change)
 * conky
 * dnust
+* lxappearance
 
 ## Helpfull keybindings for this installation
 
@@ -46,7 +47,6 @@ Here are the software that always install in my systems:
 | MOD+F12     | Shutdown computer   |
 | MOD+Shift+q | Quit                |
 | MOD+Shift+r | Re-start spectrwm   |
-| ----------  | ------------------- |
 
 Add your keybindings in spectrwm.conf
 
