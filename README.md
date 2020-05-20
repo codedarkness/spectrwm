@@ -42,7 +42,7 @@ Here are the software that always install in my systems:
 | MOD+r       | Ranger File Manager |
 | MOD+v       | Vim                 |
 | MOD+Shift+o | dmenu_recency       |
-| MOD+F10     | Lock screen         |
+| MOD+0     | Lock screen         |
 | MOD+F11     | Restart computer    |
 | MOD+F12     | Shutdown computer   |
 | MOD+Shift+q | Quit                |
