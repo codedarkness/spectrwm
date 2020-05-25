@@ -23,6 +23,18 @@
 #
 # -----------------------------------------------------------------
 
+brown-theme() {
+	config-files/themes/spectrwm-browm-theme.sh
+}
+
+dark-blue-theme() {
+	config-files/themes/spectrwm-dark-blue-themes.sh
+}
+
+dark-theme() {
+	config-files/themes/spectrwm-dark-theme.sh
+}
+
 dracula-theme() {
 	config-files/themes/spectrwm-dracula-theme.sh
 }
@@ -54,9 +66,12 @@ until [ "$selection" = "0" ]; do
 	echo " ## Spectrwm -- Tiling Window Manager for X11 ##"
 	echo " -----------------------------------------------"
 	echo ""
-	echo " 1 - Dracula Color Scheme"
-	echo " 2 - Gray Color Scheme"
-	echo " 3 - Green Color Scheme"
+	echo " 1 - Brown Color Scheme"
+	echo " 2 - Dark Blue Scheme"
+	echo " 3 - Dark Color Scheme"
+	echo " 4 - Dracula Color Scheme"
+	echo " 5 - Gray Color Scheme"
+	echo " 6 - Green Color Scheme"
 	echo " 0 - Back"
 	echo ""
 	echo -n " Enter selection [1 - 0] : "
@@ -64,9 +79,12 @@ until [ "$selection" = "0" ]; do
 	echo ""
 
 	case $selection in
-		1) clear; dracula-theme ; press_enter ;;
-		2) clear; gray-theme    ; press_enter ;;
-		3) clear; green-theme   ; press_enter ;;
+		1) clear; brown-theme     ; press_enter ;;
+		2) clear; dark-blue-theme ; press_enter ;;
+		3) clear; dark-theme      ; press_enter ;;
+		4) clear; dracula-theme   ; press_enter ;;
+		5) clear; gray-theme      ; press_enter ;;
+		6) clear; green-theme     ; press_enter ;;
 		0) clear; exit ;;
 		*) clear; incorrect_selection ; press_enter ;;
 	esac

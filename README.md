@@ -32,7 +32,6 @@ Here are the software that always install in my systems:
 * bash (can be change)
 * conky
 * dnust
-* lxappearance
 
 ## Helpfull keybindings for this installation
 
@@ -42,7 +41,7 @@ Here are the software that always install in my systems:
 | MOD+r       | Ranger File Manager |
 | MOD+v       | Vim                 |
 | MOD+Shift+o | dmenu_recency       |
-| MOD+0     | Lock screen         |
+| MOD+0	      | Lock screen         |
 | MOD+F11     | Restart computer    |
 | MOD+F12     | Shutdown computer   |
 | MOD+Shift+q | Quit                |
@@ -50,4 +49,4 @@ Here are the software that always install in my systems:
 
 Add your keybindings in spectrwm.conf
 
-Too lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.
+To lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.

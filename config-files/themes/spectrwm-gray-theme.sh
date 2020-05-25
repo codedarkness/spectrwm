@@ -34,7 +34,7 @@ sed -i 's+color_focus\		=\ rgb:.*+color_focus\		=\ rgb:85/92/9E+g' $HOME/.spectr
 	echo "### -------------------------> Color focus was change"
 
 ## Color Focus Maximized
-sed -i 's+color_focus_maximized\   =\ rgb:.*+color_focus_maximized\   =\ rgb:40/45/52+g' $HOME/.spectrwm.conf &&
+sed -i 's+color_focus_maximized\   =\ rgb:.*+color_focus_maximized\   =\ rgb:2F/34/3F+g' $HOME/.spectrwm.conf &&
 	echo "### -------------------------> Color focus maximized was change"
 
 ## Color Unfocus
