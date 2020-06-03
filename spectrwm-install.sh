@@ -33,9 +33,9 @@ debian-based() {
 }
 
 config-files() {
-	cp -ar config-files/scpectrwm.conf $HOME/.spectrwm.conf &&
+	cp -ar config-files/spectrwm.conf $HOME/.spectrwm.conf &&
 	echo " ##### spectrwm.conf has been copied";
-	cp -ar config-files/conckyrc $HOME/.conkyrc &&
+	cp -ar config-files/cockyrc $HOME/.conkyrc &&
 	echo " #### conkyrc has been copied"
 }
 
