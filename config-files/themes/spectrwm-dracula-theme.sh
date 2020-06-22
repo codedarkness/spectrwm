@@ -61,6 +61,12 @@ sed -i 's+bar_color\[1\]\	    	=\ rgb:.*+bar_color\[1\]\	    	=\ rgb:1E/1F/29+g'
 sed -i 's+bar_color_selected\[1\]\	=\ rgb:.*+bar_color_selected\[1\]\	=\ rgb:38/3C/4A+g' $HOME/.spectrwm.conf &&
 	echo "### -------------------------> Bar selected was change"
 
+## dmenu system account
+sed -i 's/nb="-nb #.*"/nb="-nb #1E1F29"/g' ~/Documents/scripts/sysact.sh &&
+sed -i 's/sb="-sb #.*"/sb="-sb #1E1F29"/g' ~/Documents/scripts/sysact.sh &&
+sed -i 's/nf="-nf #.*"/nf="-nf #383A59"/g' ~/Documents/scripts/sysact.sh &&
+	echo "### -------------------------> dmenu colors has canged"
+
 echo "------------------------------------------------------------"
 
 echo "### -------------------------> DONE! Re-start Spectrdwm"
