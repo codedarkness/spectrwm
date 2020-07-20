@@ -30,7 +30,7 @@ Here are the software that always install in my systems:
 * ff-theme-util
 * fix_xcursor
 * bash (can be change)
-* conky
+* conky (is used for the status bar)
 * dnust
 
 ## Helpfull keybindings for this installation
@@ -41,12 +41,10 @@ Here are the software that always install in my systems:
 | MOD+r       | Ranger File Manager |
 | MOD+v       | Vim                 |
 | MOD+Shift+o | dmenu_recency       |
-| MOD+0	      | Lock screen         |
-| MOD+F11     | Restart computer    |
-| MOD+F12     | Shutdown computer   |
-| MOD+Shift+q | Quit                |
+| MOD+0       | System account      |
+| MOD+F12     | Lock screen         |
 | MOD+Shift+r | Re-start spectrwm   |
 
-Add your keybindings in spectrwm.conf
+Add your keybindings in /.config/spectrwm/spectrwm.conf. And change your terminal before installing
 
-To lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.
+Too lazzy! that's why i user *Manjaro* o *Debian* to install my base system and work from that.

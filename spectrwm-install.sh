@@ -33,10 +33,30 @@ debian-based() {
 }
 
 config-files() {
-	cp -ar config-files/spectrwm.conf $HOME/.spectrwm.conf &&
-	echo " ##### spectrwm.conf has been copied";
-	cp -ar config-files/cockyrc $HOME/.conkyrc &&
-	echo " #### conkyrc has been copied"
+	echo ""
+	echo " Copy new config files to your system"
+	echo ""
+	sleep 2;
+
+	### Check for dir, if not found create it using the mkdir ###
+	dldir="$HOME/.config/spectrwm"
+	[ ! -d "$dldir" ] && mkdir -p "$dldir"
+
+	cp -ar config-files/configs/spectrwm.conf $HOME/.config/spectrwm/ &&
+	echo " spectrwm.conf has been copied" || echo " Something is wrong"
+	echo ""
+
+	cp -ar config-files/configs/sysact.sh $HOME/.config/spectrwm/ &&
+	echo " sysact.sh has been copied" || echo " Shhhh... There's a problem!"
+	echo ""
+
+	cp -ar config-files/configs/baractions.sh $HOME/.config/spectrwm/ &&
+	echo " baraction.sh has been copied" || echo " It's not your!!"
+	echo ""
+
+	cp -ar config-files/configs/cockyrc $HOME/.conkyrc &&
+	echo " conkyrc has been copied" || echo " Upsss!"
+	echo ""
 }
 
 keybindings() {
@@ -70,15 +90,15 @@ until [ "$selection" = "0" ]; do
 	echo " |___/ .__/ \___|\___|\__|_|    \_/\_/ |_| |_| |_| "
 	echo "     | |                                           "
 	echo "     |_|                                           "
-	echo " --------------------------------------------------"
-	echo " ###       tiling window manager for X11        ###"
-	echo " --------------------------------------------------"
+	echo ""
+	echo " tiling window manager for X11"
 	echo ""
 	echo " 1 - Arch Based"
 	echo " 2 - Debian Based"
 	echo " 3 - Copy (custom) config files"
 	echo " 4 - Keybindings"
 	echo " 5 - themes (change colors)"
+	echo ""
 	echo " 0 - Exit"
 	echo ""
 	echo -n " Enter selection [1 - 0] : "

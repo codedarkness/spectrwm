@@ -10,11 +10,12 @@ The MODKEY4 = Windows Key
 | :---------- | :------------------- |
 | MOD+Enter   | Open Terminal (bash) |
 | MOD+q       | Close Window         |
-| MOD+Shit+q  | Exit Spectrwm        |
+| MOD+Shit+r  | Restart Spectrwm     |
 | MOD+r       | Ranger Filemanager   |
 | MOD+v       | Open Vim             |
+| MOD+0       | System Account       |
 
-For more keybindings check the spectrwm.conf file.
+For more keybindings check the /.config/spectrwm/spectrwm.conf file.
 
 (press q to exit)
 

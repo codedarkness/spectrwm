@@ -1,9 +1,6 @@
 #!/bin/bash
 # baraction.sh for spectrwm status bar
 
-
-
-
 ## CPU
 cpu(){
 	read cpu a b c previdle rest < /proc/stat
@@ -16,11 +13,11 @@ cpu(){
 }
 
 ## TEMP
-tem(){
+#tem(){
 #	tem=cat /sys/class/thermal/thermal_zone0/temp
 #  	tem='expr $tem / 1000'
-  	echo -e "TEM pice of shit"
-}
+#  	echo -e "TEM pice of shit"
+#}
 
 ## MEM
 mem(){
@@ -31,16 +28,16 @@ mem(){
 ## DISK
 hdd(){
 	hdd="$(df -h | awk 'NR==4{print $4}')"
-	echo -e "HDD $hdd"
+	echo -e "SSH $hdd"
 }
+
+## BATTERY
 
 ## VOLUME
 vol(){
 	vol=`amixer get Master | awk -F'[][]' 'END{ print $2 }'`
 	echo -e "VOL $vol"
 }
-
-## BATTERY
 
 ## DATE
 date(){

@@ -26,17 +26,29 @@
 # -----------------------------------------------------------------
 
 spectrwm() {
-	echo " Installing spectrwm";
+	echo ""
+	echo " Installing spectrwm"
+	echo ""
+	sleep 2;
+
 	dpkg -l | grep spectrwm &&
-		echo " spctrwm is installed in your system" ||
-		sudo apt install -y spectrwm
+	echo " spctrwm is installed in your system" ||
+	sudo apt install -y spectrwm
+
+	echo ""
 }
 
 conky() {
-	echo " Installing conky";
+	echo ""
+	echo " Installing conky"
+	echo ""
+	sleep 2;
+
 	dpkg -l | grep  conky &&
-		echo " conky is installed in your system" ||
-		sudo apt install -y conky
+	echo " conky is installed in your system" ||
+	sudo apt install -y conky
+
+	echo ""
 }
 
 press_enter() {
@@ -53,13 +65,19 @@ incorrect_selection() {
 until [ "$selection" = "0" ]; do
 	clear
 	echo ""
-	echo " -----------------------------------------------"
-	echo " ###---------- Debian Based System ----------###"
-	echo " ## Spectrwm -- Tiling Window Manager for X11 ##"
-	echo " -----------------------------------------------"
+	echo " DarknessCode"
+	echo "  _____       _     _             ____                     _ "
+	echo " |  __ \     | |   (_)           |  _ \                   | |"
+	echo " | |  | | ___| |__  _  __ _ _ __ | |_) | __ _ ___  ___  __| |"
+	echo " | |  | |/ _ \ '_ \| |/ _' | '_ \|  _ < / _' / __|/ _ \/ _' |"
+	echo " | |__| |  __/ |_) | | (_| | | | | |_) | (_| \__ \  __/ (_| |"
+	echo " |_____/ \___|_.__/|_|\__,_|_| |_|____/ \__,_|___/\___|\__,_|"
+	echo ""
+	echo " Spectrwm -- Tiling Window Manager for X11"
 	echo ""
 	echo " 1 - Install Spectrwm"
-	echo " 2 - Install Conky"
+	echo " 2 - Install Conky (for status bar)"
+	echo ""
 	echo " 0 - Back"
 	echo ""
 	echo -n " Enter selection [1 - 0] : "
