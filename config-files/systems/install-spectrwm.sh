@@ -21,54 +21,60 @@
 #
 # -----------------------------------------------------------------
 
-arch-spectrwm() {
+install-spectrwm() {
 	echo ""
-	echo " Installing spectrwm"
+	echo " Installing spectrwm in Arch, Debian Based systems"
 	echo ""
 	sleep 2
 
-	pacman -Qs spectrwm &&
-	echo " spctrwm is installed in your system" ||
-	sudo pacman -S --noconfirm --needed spectrwm
+	if ! location="$(type -p "spectrwm")" || [ -z "spectrwm" ]; then
+
+		# check if pacman is installed
+		if which pacman > /dev/null; then
+
+			sudo pacman -S --noconfirm spectrwm
+
+		fi
+
+		# check if apt is installed
+		if which apt > /dev/null; then
+
+			sudo apt install -y spectrwm
+
+		fi
+
+	else
+		echo " nothing to do!"
+	fi
 
 	echo ""
 }
 
-arch-conky() {
+install-conky() {
 	echo ""
-	echo " Installing conky"
-	echo ""
-	sleep 2
-
-	pacman -Qs conky &&
-	echo " conky is installed in your system" ||
-	sudo pacman -S --noconfirm --needed conky
-
-	echo ""
-}
-
-debian-spectrwm() {
-	echo ""
-	echo " Installing spectrwm"
+	echo " Installing conky in Arch, Debian Based systems"
 	echo ""
 	sleep 2
 
-	dpkg -l | grep spectrwm &&
-	echo " spctrwm is installed in your system" ||
-	sudo apt install -y spectrwm
+	if ! location="$(type -p "conky")" || [ -z "conky" ]; then
 
-	echo ""
-}
+		# check if pacman is installed
+		if which pacman > /dev/null; then
 
-debian-conky() {
-	echo ""
-	echo " Installing conky"
-	echo ""
-	sleep 2
+			sudo pacman -S --noconfirm conky
 
-	dpkg -l | grep  conky &&
-	echo " conky is installed in your system" ||
-	sudo apt install -y conky
+		fi
+
+		# check if apt is installed
+		if which apt > /dev/null; then
+
+			sudo apt install -y conky
+
+		fi
+
+	else
+		echo " nothing to do!"
+	fi
 
 	echo ""
 }
@@ -99,13 +105,8 @@ until [ "$selection" = "0" ]; do
 	echo ""
 	echo " Install spectrwm in arch and debian based systems"
 	echo ""
-	echo " Arch-Based"
 	echo " 1 - Spectrwm"
 	echo " 2 - Conky (for status bar)"
-	echo ""
-	echo " Debian-Based"
-	echo " 3 - Spectrwm"
-	echo " 4 - Conky (for status bar)"
 	echo ""
 	echo " 0 - Back"
 	echo ""
@@ -114,10 +115,8 @@ until [ "$selection" = "0" ]; do
 	echo ""
 
 	case $selection in
-		1) clear; arch-spectrwm   ; press_enter ;;
-		2) clear; arch-conky      ; press_enter ;;
-		3) clear; debian-spectrwm ; press_enter ;;
-		4) clear; debian-conky    ; press_enter ;;
+		1) clear; install-spectrwm   ; press_enter ;;
+		2) clear; install-conky      ; press_enter ;;
 		0) clear; exit ;;
 		*) clear; incorrect_selection ; press_enter ;;
 	esac
