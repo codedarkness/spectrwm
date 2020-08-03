@@ -74,3 +74,19 @@ sed -i 's/sb="-sb #.*"/sb="-sb #222D31"/g' ~/.config/spectrwm/sysact.sh &&
 sed -i 's/nf="-nf #.*"/nf="-nf #4D5656"/g' ~/.config/spectrwm/sysact.sh &&
 echo " dmenu colors has canged"
 echo ""
+
+while true; do
+	read -p " Do you want to copy Xresources [y - n] : " yn
+	case $yn in
+		[Yy]* )
+			cp -af config-files/configs/themes/xresources/Xresources-green $HOME/.Xresources &&
+			echo " Xresources has been copy" || echo " Upsss! we have a problem here" ; break ;;
+		[Nn]* )
+			break ;;
+		* ) echo "Please answer yes or no." ;;
+	esac
+done
+
+echo ""
+echo " Restart spectrwm (Mod+Shift+r)"
+echo " If did you copy xresources do you need to exit and login back."

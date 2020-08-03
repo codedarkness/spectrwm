@@ -24,12 +24,35 @@
 #
 # -----------------------------------------------------------------
 
-arch-based() {
-	config-files/systems/arch-based.sh
+install-spectrwm() {
+	config-files/systems/install-spectrwm.sh
 }
 
-debian-based() {
-	config-files/systems/debian-based.sh
+change-terminal() {
+	echo ""
+	echo " Change terminal in spectrwm.conf custom file"
+	echo ""
+	echo " change to your preffer terminal here before copy"
+	echo " the custom spectrwm.conf file"
+	echo ""
+	sleep 2
+
+	while true; do
+		read -p " Change Terminal [y - n] : " yn
+		case $yn in
+			[Yy]* )
+				read -p " Which is your preffer terminal : " choice;
+sed -i '/#startTerminal/,/#endTerminal/c\
+\#startTerminal\
+program['$choice'] = '$choice'\
+bind['$choice'] = MOD+Return\
+\#endTerminal' config-files/configs/spectrwm.conf &&
+				echo " Your terminal ($choice) has been changed" || echo " Upsss!"; break ;;
+			[Nn]* )
+				break ;;
+			* ) echo "Please answer yes or no." ;;
+		esac
+	done
 }
 
 config-files() {
@@ -93,8 +116,8 @@ until [ "$selection" = "0" ]; do
 	echo ""
 	echo " tiling window manager for X11"
 	echo ""
-	echo " 1 - Arch Based"
-	echo " 2 - Debian Based"
+	echo " 1 - Install spectrwm"
+	echo " 2 - Change terminal"
 	echo " 3 - Copy (custom) config files"
 	echo " 4 - Keybindings"
 	echo " 5 - themes (change colors)"
@@ -106,9 +129,9 @@ until [ "$selection" = "0" ]; do
 	echo ""
 
 	case $selection in
-		1) clear; arch-based   ;;
-		2) clear; debian-based ;;
-		3) clear; config-files  ; press_enter ;;
+		1) clear; install-spectrwm ;;
+		2) clear; change-terminal  ; press_enter ;;
+		3) clear; config-files     ; press_enter ;;
 		4) clear; keybindings  ;;
 		5) clear; themes       ;;
 		0) clear; exit ;;
