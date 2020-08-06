@@ -23,58 +23,78 @@
 
 install-spectrwm() {
 	echo ""
-	echo " Installing spectrwm in Arch, Debian Based systems"
+	echo " Installing spectrwm"
+	echo " Arch and Debian Based Systems"
 	echo ""
 	sleep 2
 
-	if ! location="$(type -p "spectrwm")" || [ -z "spectrwm" ]; then
+	while true; do
+		read -p " Install Spectrwm [y - n] : " yn
+		case $yn in
+			[Yy]* )
+				if ! location="$(type -p "spectrwm")" || [ -z "spectrwm" ]; then
 
-		# check if pacman is installed
-		if which pacman > /dev/null; then
+					# check if pacman is installed
+					if which pacman > /dev/null; then
 
-			sudo pacman -S --noconfirm spectrwm
+						sudo pacman -S --noconfirm spectrwm
 
-		fi
+					# check if apt is installed
+					elif which apt > /dev/null; then
 
-		# check if apt is installed
-		if which apt > /dev/null; then
+						sudo apt install -y spectrwm
 
-			sudo apt install -y spectrwm
+					else
+						echo " Your system is not Arch or Debian Based System"
+					fi
 
-		fi
-
-	else
-		echo " nothing to do!"
-	fi
+				else
+					echo " Nothing to do! Spectrwm is installed in your System"
+				fi ; break ;;
+			[Nn]* )
+				break ;;
+			* ) echo "Please answer yes or no." ;;
+		esac
+	done
 
 	echo ""
 }
 
 install-conky() {
 	echo ""
-	echo " Installing conky in Arch, Debian Based systems"
+	echo " Installing conky"
+	echo " Arch, Debian Based systems"
 	echo ""
 	sleep 2
 
-	if ! location="$(type -p "conky")" || [ -z "conky" ]; then
+	while true; do
+		read -p "Install Conky [y - n] : " yn
+		case $yn in
+			[Yy]* )
+				if ! location="$(type -p "conky")" || [ -z "conky" ]; then
 
-		# check if pacman is installed
-		if which pacman > /dev/null; then
+					# check if pacman is installed
+					if which pacman > /dev/null; then
 
-			sudo pacman -S --noconfirm conky
+						sudo pacman -S --noconfirm conky
 
-		fi
+					# check if apt is installed
+					elif which apt > /dev/null; then
 
-		# check if apt is installed
-		if which apt > /dev/null; then
+						sudo apt install -y conky
 
-			sudo apt install -y conky
+					else
+						echo " Your system is not Arch or Debian Based System"
+					fi
 
-		fi
-
-	else
-		echo " nothing to do!"
-	fi
+				else
+					echo " Nothing to do! Conky is installed in your System"
+				fi ; break ;;
+			[Nn]* )
+				break ;;
+			* ) echo "Please answer yes or no." ;;
+		esac
+	done
 
 	echo ""
 }
