@@ -65,7 +65,7 @@ config-files() {
 	dldir="$HOME/.config/spectrwm"
 	[ ! -d "$dldir" ] && mkdir -p "$dldir"
 
-	cp -ar config-files/configs/spectrwm.conf $HOME/.config/spectrwm/ &&
+	cp -ar config-files/configs/spectrwm.conf $HOME/.spectrwm.conf &&
 	echo " spectrwm.conf has been copied" || echo " Something is wrong"
 	echo ""
 
@@ -73,11 +73,11 @@ config-files() {
 	echo " sysact.sh has been copied" || echo " Shhhh... There's a problem!"
 	echo ""
 
-	cp -ar config-files/configs/baractions.sh $HOME/.config/spectrwm/ &&
+	cp -ar config-files/configs/baraction.sh $HOME/.config/spectrwm/ &&
 	echo " baraction.sh has been copied" || echo " It's not your!!"
 	echo ""
 
-	cp -ar config-files/configs/cockyrc $HOME/.conkyrc &&
+	cp -ar config-files/configs/conkyrc $HOME/.conkyrc &&
 	echo " conkyrc has been copied" || echo " Upsss!"
 	echo ""
 }
