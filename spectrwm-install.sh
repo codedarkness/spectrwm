@@ -77,6 +77,10 @@ config-files() {
 	echo " baraction.sh has been copied" || echo " It's not your!!"
 	echo ""
 
+	cp -af config-files/config/dmenu-programs.sh $HOME/.config/spectrw/ &&
+	echo " demnu custom has been copied" || echo " Not again!!!!"
+	echo ""
+
 	cp -ar config-files/configs/conkyrc $HOME/.conkyrc &&
 	echo " conkyrc has been copied" || echo " Upsss!"
 	echo ""
