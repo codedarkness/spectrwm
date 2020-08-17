@@ -22,21 +22,19 @@
 #
 # -----------------------------------------------------------------
 
-font="-fn 'Noto-11'"
+font="-fn 'Noto-12'"
 nb="-nb #1E1F29"
 sb="-sb #1E1F29"
 sf="-sf #FAF9FA"
 nf="-nf #383A59"
 
 declare options=("Cancel
-Exit
 Lock-Screen
+Exit
 Shutdown
 Reboot
 Suspend
-Hibernate
-Hybrid-Sleep
-Suspen-Hibernate")
+Hibernate")
 
 choice=$(
 	echo -e "${options[@]}" |
@@ -45,14 +43,12 @@ choice=$(
 
 case "$choice" in
 	Cancel)	exit 1 ;;
-	Exit)		kill -TERM $(pidof -s qtile) ;;
+	Exit)		kill -TERM $(pidof -s spectrwm) ;;
 	Lock-Screen)	blurlock ;;
 	Shutdown)	systemctl poweroff ;;
 	Reboot)		systemctl reboot ;;
 	Suspend)	systemctl suspend ;;
 	Hibernate)	systemctl hibernate ;;
-	Hybrid-Sleep)	systemctl hibernate ;;
-	Suspend-Hibernate)	systemctl suspend-then-hibernate ;;
 	*) exit 1 ;;
 esac
 
