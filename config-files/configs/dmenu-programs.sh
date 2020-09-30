@@ -27,16 +27,16 @@ sb="-sb #222D31"
 sf="-sf #FAF9FA"
 nf="-nf #4D5656"
 
+terminal="urxvt"
+
 declare options=("Brave
 Calcurse
-Filezilla
 Gimp
 Htop
 LibreOffice
 Mutt
 PyRadio
 Ranger
-Teamviewer
 Telegram
 Vim")
 
@@ -48,17 +48,15 @@ choice=$(
 case "$choice" in
 	quit)        echo "Program terminated." && exit 1 ;;
 	Brave)       choice=brave ;;
-	Calcurse)    exec terminal -e calcurse ;;
-	Filezilla)   choice=filezilla ;;
+	Calcurse)    exec $terminal -e calcurse ;;
 	Gimp)        choice=gimp ;;
-	Htop)        exec terminal -e htop ;;
+	Htop)        exec $terminal -e htop ;;
 	LibreOffice) choice=libreoffice ;;
-	Mutt)	     exec terminal -e mutt ;;
-	PyRadio)     exec terminal -e pyradio ;;
-	Ranger)	     exec terminal -e ranger ;;
-	Teamviewer)  choice=teamviewer ;;
+	Mutt)	     exec $terminal -e mutt ;;
+	PyRadio)     exec $terminal -e pyradio ;;
+	Ranger)	     exec $terminal -e ranger ;;
 	Telegram)    choice=telegram-desktop ;;
-	Vim)         exec terminal -e vim ;;
+	Vim)         exec $terminal -e vim ;;
 	*) exit 1 ;;
 esac
 

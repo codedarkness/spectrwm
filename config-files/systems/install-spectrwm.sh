@@ -12,7 +12,7 @@
 #        FILE: install-spectrwm.sh
 #       USAGE: ./install-spectrwm.sh | sub menu of spectrwm-install.sh
 #
-# DESCRIPTION: install spectrwm in arch and debian based systems
+# DESCRIPTION: install spectrwm in linux systems
 #
 #      AUTHOR: DarknessCode
 #       EMAIL: admin@darknesscode.com
@@ -24,7 +24,7 @@
 install-spectrwm() {
 	echo ""
 	echo " Installing spectrwm"
-	echo " Arch and Debian Based Systems"
+	echo " Arch Linux | Debian | Void Linux"
 	echo ""
 	sleep 2
 
@@ -35,17 +35,22 @@ install-spectrwm() {
 				if ! location="$(type -p "spectrwm")" || [ -z "spectrwm" ]; then
 
 					# check if pacman is installed
-					if which pacman > /dev/null; then
+					if which pacman > /dev/null 2>&1; then
 
 						sudo pacman -S --noconfirm spectrwm
 
 					# check if apt is installed
-					elif which apt > /dev/null; then
+					elif which apt > /dev/null 2>&1; then
 
 						sudo apt install -y spectrwm
 
+					# check if xbps is installed
+					elif which xbps-install > /dev/null 2>&1; then
+
+						sudo xbps-install -Sy spectrwm
+
 					else
-						echo " Your system is not Arch or Debian Based System"
+						echo " Your system is not compatible with this script..."
 					fi
 
 				else
@@ -63,7 +68,7 @@ install-spectrwm() {
 install-conky() {
 	echo ""
 	echo " Installing conky"
-	echo " Arch, Debian Based systems"
+	echo " Arch Linux | Debian | Void Linux"
 	echo ""
 	sleep 2
 
@@ -74,17 +79,21 @@ install-conky() {
 				if ! location="$(type -p "conky")" || [ -z "conky" ]; then
 
 					# check if pacman is installed
-					if which pacman > /dev/null; then
+					if which pacman > /dev/null 2>&1; then
 
 						sudo pacman -S --noconfirm conky
 
 					# check if apt is installed
-					elif which apt > /dev/null; then
+					elif which apt > /dev/null 2>&1; then
 
 						sudo apt install -y conky
 
+					elif which xbps-install > /dev/null 2>&1; then
+
+						sudo xbps-install -Sy conky
+
 					else
-						echo " Your system is not Arch or Debian Based System"
+						echo " Your system is not compatible with this script..."
 					fi
 
 				else
@@ -123,7 +132,7 @@ until [ "$selection" = "0" ]; do
 	echo "                                     | |                                           "
 	echo "                                     |_| 						 "
 	echo ""
-	echo " Install spectrwm in arch and debian based systems"
+	echo " Install spectrwm in Arch Linux | Debian | Void Linux"
 	echo ""
 	echo " 1 - Spectrwm"
 	echo " 2 - Conky (for status bar)"

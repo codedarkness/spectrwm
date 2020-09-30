@@ -77,7 +77,7 @@ config-files() {
 	echo " baraction.sh has been copied" || echo " It's not your!!"
 	echo ""
 
-	cp -af config-files/config/dmenu-programs.sh $HOME/.config/spectrw/ &&
+	cp -af config-files/configs/dmenu-programs.sh $HOME/.config/spectrw/ &&
 	echo " demnu custom has been copied" || echo " Not again!!!!"
 	echo ""
 
@@ -122,9 +122,9 @@ until [ "$selection" = "0" ]; do
 	echo ""
 	echo " 1 - Install spectrwm"
 	echo " 2 - Change terminal"
-	echo " 3 - Copy (custom) config files"
+	echo " 3 - Copy (custom) files"
 	echo " 4 - Keybindings"
-	echo " 5 - themes (change colors)"
+	echo " 5 - Themes (change colors)"
 	echo ""
 	echo " 0 - Exit"
 	echo ""

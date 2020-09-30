@@ -8,7 +8,7 @@ The MODKEY4 = Windows Key
 
 | Keys        | Action               |
 | :---------- | :------------------- |
-| MOD+Enter   | Open Terminal (bash) |
+| MOD+Enter   | Open Terminal (urxvt)|
 | MOD+q       | Close Window         |
 | MOD+Shit+r  | Restart Spectrwm     |
 | MOD+r       | Ranger Filemanager   |
