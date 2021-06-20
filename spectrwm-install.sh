@@ -5,7 +5,7 @@
 # | |_| | (_| | |  |   <| | | |  __/\__ \__ \ |__| (_) | (_| |  __/
 # |____/ \__,_|_|  |_|\_\_| |_|\___||___/___/\____\___/ \__,_|\___|
 # -----------------------------------------------------------------
-# https://darkncesscode.com
+# https://darkncesscode.xyz
 # https://github.com/codedarkness
 # -----------------------------------------------------------------
 #
@@ -18,7 +18,7 @@
 #	       option that file has
 #
 #      AUTHOR: DarknessCode
-#       EMAIL: admin@darknesscode.com
+#       EMAIL: achim@darknesscode.xyz
 #
 #     CREATED: 04-15-2020
 #
@@ -73,7 +73,7 @@ config-files() {
 	echo " sysact.sh has been copied" || echo " Shhhh... There's a problem!"
 	echo ""
 
-	cp -ar config-files/configs/baraction.sh $HOME/.config/spectrwm/ &&
+	cp -ar config-files/configs/statusbar.sh $HOME/.config/spectrwm/ &&
 	echo " baraction.sh has been copied" || echo " It's not your!!"
 	echo ""
 
@@ -81,9 +81,13 @@ config-files() {
 	echo " demnu custom has been copied" || echo " Not again!!!!"
 	echo ""
 
-	cp -ar config-files/configs/conkyrc $HOME/.conkyrc &&
-	echo " conkyrc has been copied" || echo " Upsss!"
+	cp -afr config-files/configs/nmcli $HOME/.config/spectrw/ &&
+	echo " NetworkManager dmenu utility was copied" || echo " Holy Sssshhhh"
 	echo ""
+
+	#cp -ar config-files/configs/conkyrc $HOME/.conkyrc &&
+	#echo " conkyrc has been copied" || echo " Upsss!"
+	#echo ""
 }
 
 keybindings() {

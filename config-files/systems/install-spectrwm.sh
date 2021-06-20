@@ -5,7 +5,7 @@
 # | |_| | (_| | |  |   <| | | |  __/\__ \__ \ |__| (_) | (_| |  __/
 # |____/ \__,_|_|  |_|\_\_| |_|\___||___/___/\____\___/ \__,_|\___|
 # -----------------------------------------------------------------
-# https://darkncesscode.com
+# https://darkncesscode.xyz
 # https://github.com/codedarkness
 # -----------------------------------------------------------------
 #
@@ -15,7 +15,7 @@
 # DESCRIPTION: install spectrwm in linux systems
 #
 #      AUTHOR: DarknessCode
-#       EMAIL: admin@darknesscode.com
+#       EMAIL: achim@darknesscode.xyz
 #
 #     CREATED: 07-27-20 10:32
 #
@@ -135,7 +135,7 @@ until [ "$selection" = "0" ]; do
 	echo " Install spectrwm in Arch Linux | Debian | Void Linux"
 	echo ""
 	echo " 1 - Spectrwm"
-	echo " 2 - Conky (for status bar)"
+	echo " 2 - Conky (for status bar optional)"
 	echo ""
 	echo " 0 - Back"
 	echo ""
